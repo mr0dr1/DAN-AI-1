@@ -53,9 +53,13 @@
  * `window.location.origin` gives us the protocol + host + port of the
  * current page, making the frontend deployment-agnostic (no hardcoded URLs).
  */
-const API = (typeof window !== 'undefined' && window.location.origin)
-    ? window.location.origin
-    : 'http://localhost:8000';
+// Production backend
+const API = "https://zbro7-dan-backend.hf.space";
+
+// Optional: auto local dev fallback
+// const API = window.location.hostname === "localhost"
+//     ? "http://localhost:8000"
+//     : "https://zbro7-dan-backend.hf.space";
 
 /* ================================================================
    APPLICATION STATE

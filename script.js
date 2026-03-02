@@ -1,10 +1,10 @@
 /* ================================================================
-   J.A.R.V.I.S Frontend — Main Application Logic
+   DAN Frontend — Main Application Logic
    ================================================================
 
    ARCHITECTURE OVERVIEW
    ---------------------
-   This file powers the entire frontend of the J.A.R.V.I.S AI assistant.
+   This file powers the entire frontend of the DAN AI assistant.
    It handles:
 
    1. CHAT MESSAGING — The user types (or speaks) a message, which is
@@ -89,7 +89,7 @@ let currentMode = 'general';
  * received. Prevents the user from sending another message while the
  * assistant is still replying (avoids race conditions and garbled output).
  */
-let isStreaming = false;
+let isStreaming = true;
 
 /*
  * isListening — True while the speech recognition engine is actively
